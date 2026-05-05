@@ -14,8 +14,9 @@ st.set_page_config(page_title="Klasifikasi Bunga Iris", layout="wide")
 @st.cache_data
 def load_data():
     # Membaca data dari file Iris.csv
+    url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
     try:
-        df = pd.read_csv("Iris.csv")
+        df = pd.read_csv(url)
         return df
     except FileNotFoundError:
         return None
