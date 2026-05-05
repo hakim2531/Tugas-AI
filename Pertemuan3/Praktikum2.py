@@ -15,8 +15,8 @@ st.set_page_config(page_title="Klasifikasi Bunga Iris", layout="wide")
 def load_data():
     # Membaca data dari file Iris.csv
     url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
-        df = pd.read_csv(url)
-    
+    df = pd.read_csv(url)
+    return df
 
 # --- TRAINING MODEL ---
 def train_model(df):
