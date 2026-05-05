@@ -13,9 +13,9 @@ st.set_page_config(page_title="Klasifikasi Bunga Iris", layout="wide")
 # --- LOAD DATASET ---
 @st.cache_data
 def load_data():
-    # Membaca data dari file Iris_3.csv
+    # Membaca data dari file Iris.csv
     try:
-        df = pd.read_csv("Iris_3.csv")
+        df = pd.read_csv("Iris.csv")
         return df
     except FileNotFoundError:
         return None
@@ -43,7 +43,7 @@ def train_model(df):
 # --- MAIN APP ---
 def main():
     st.title("🌸 Aplikasi Klasifikasi Bunga Iris")
-    st.write("Aplikasi ini memprediksi spesies bunga Iris berdasarkan fitur morfologinya menggunakan data `Iris_3.csv`.")
+    st.write("Aplikasi ini memprediksi spesies bunga Iris berdasarkan fitur morfologinya menggunakan data `Iris.csv`.")
 
     df_iris = load_data()
     
@@ -89,10 +89,10 @@ def main():
             st.pyplot(fig)
 
         # Bagian Dataset
-        if st.checkbox("Tampilkan Dataset Referensi (Iris_3.csv)"):
+        if st.checkbox("Tampilkan Dataset Referensi (Iris.csv)"):
             st.dataframe(df_iris, use_container_width=True)
     else:
-        st.error("File `Iris_3.csv` tidak ditemukan. Pastikan file berada di folder yang sama dengan script.")
+        st.error("File `Iris.csv` tidak ditemukan. Pastikan file berada di folder yang sama dengan script.")
 
 if __name__ == "__main__":
     main()
