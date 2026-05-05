@@ -38,7 +38,7 @@ def train_model(df):
     return model, accuracy
 
 def main():
-    st.title("🌸 Aplikasi Klasifikasi Iris (Data via URL)")
+    st.title("🌸 Aplikasi Klasifikasi Iris 🌸")
     st.write("Aplikasi ini mengambil data langsung dari link CSV online.")
 
     df_iris = load_data_from_url()
